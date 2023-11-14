@@ -1,0 +1,128 @@
+:root{
+    --bkg-degrade:linear-gradient(180deg, #0A3D62 0%, #82CCDD 30.21%, #38ADA9 66.67%, #0A3D62 100%);
+}
+
+/* ---- FIN VARIABLES ---- */
+
+/* ---- FONCTIONS ---- */
+@mixin aligment($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+  }
+  @mixin flexAlign($wrap, $justify, $align) {
+    display: flex;
+    flex-wrap: $wrap;
+    justify-content: $justify;
+    align-items: $align;
+  }
+/*---- Fin Fonctions ----*/
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    color: #fff;
+    text-decoration: none;
+    list-style: none;
+  }
+  body{
+    background:var(--bkg-degrade) no-repeat;
+    height: 100vh;
+        #bkg_bubbles img{
+            height: 100vh;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+        .parametres{
+            @include aligment(row,space-between ,baseline );
+                background-color: rgb(43, 255, 0);
+                position: fixed;
+                width: 5%;
+                height: 50vh;
+                z-index: 5;
+                top:0;
+                left:90%;
+            .gear img{
+                z-index: 5;
+                position: relative;
+                right: 50%;
+                height: 75px;
+                width: 75px;
+            }
+            .parametres--icones{
+                .para_theme,.para_lang,para_ressources{
+                   max-height: 33%;
+                }
+                @include aligment(column,space-evenly ,center );
+                height: 100%;
+                width: 15%;
+
+            }
+        }
+        .parametres img{
+            height: 35%;
+            width: auto;
+        }
+
+    #main--conteneur{
+        @include aligment(column,space-evenly ,center );
+        #home,#bio{
+            height: 100vh;
+        }
+        header{
+            position: fixed;
+            top: 5px;
+            width: 100%;
+            min-height: 100px;
+            max-height: 150px;
+            border: #000 solid 1px;
+            background: linear-gradient(180deg, #0A3D62 0%, rgba(10, 61, 98, 0.00) 100%);
+            @include aligment(row,space-between ,center);
+
+            h1, li a{
+                color: #FFF;
+                text-align: center;
+                font-family: Raleway;
+            }
+            .header--logoTitle{
+                margin-left: 5%;
+            }
+            .header--logoTitle .logoHeader {
+                max-width: calc(100% /4);
+                
+                .logoHeader--Logo{
+                    width: 250px;
+                }
+                h1{
+                    box-sizing: content-box;
+                    font-size:1em ;
+                    font-style: normal;
+                    line-height: normal;
+                }
+
+            }
+            .header--navigation{
+                margin: auto;
+                margin-right:calc(50% /2);
+                width: 700px;
+                max-width: calc(100% /2);
+                #slider ul{
+                    width: 100%;
+                    @include aligment(row,space-evenly ,center);
+
+                    li a{
+                        text-transform: uppercase;
+                        font-size: 1.5em;
+                        font-style: normal;
+                        font-weight: 500;
+                    }
+                }
+            }
+        } 
+    }
+    
+}
+  
