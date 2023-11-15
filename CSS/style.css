@@ -15,7 +15,6 @@
 }
 
 body {
-  background: var(--bkg-degrade) no-repeat;
   height: 100vh;
 }
 body #bkg_bubbles img {
@@ -61,6 +60,8 @@ body .parametres img {
   width: auto;
 }
 body #main--conteneur {
+  height: auto;
+  background: var(--bkg-degrade) no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -71,7 +72,7 @@ body #main--conteneur #home, body #main--conteneur #bio {
 }
 body #main--conteneur header {
   position: fixed;
-  top: 5px;
+  top: 0;
   width: 100%;
   min-height: 100px;
   max-height: 150px;
@@ -120,4 +121,16 @@ body #main--conteneur header .header--navigation #slider ul li a {
   font-size: 1.5em;
   font-style: normal;
   font-weight: 500;
+}
+body #main--conteneur #home {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+body #main--conteneur #home .home--logo {
+  width: 50%;
+}
+body #main--conteneur #home .home--logo .logoHome {
+  max-width: 50%;
 }/*# sourceMappingURL=style.css.map */

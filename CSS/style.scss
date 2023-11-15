@@ -27,7 +27,6 @@
     list-style: none;
   }
   body{
-    background:var(--bkg-degrade) no-repeat;
     height: 100vh;
         #bkg_bubbles img{
             height: 100vh;
@@ -68,13 +67,15 @@
         }
 
     #main--conteneur{
+        height: auto;
+         background:var(--bkg-degrade) no-repeat;
         @include aligment(column,space-evenly ,center );
         #home,#bio{
             height: 100vh;
         }
         header{
             position: fixed;
-            top: 5px;
+            top:0;
             width: 100%;
             min-height: 100px;
             max-height: 150px;
@@ -122,6 +123,17 @@
                 }
             }
         } 
+        #home{
+            //position: relative;
+            @include aligment(column, space-around, center);
+            .home--logo{
+                width: calc(100%/2);
+
+                .logoHome{
+                    max-width: calc(100%/2);
+                }
+            }
+        }
     }
     
 }

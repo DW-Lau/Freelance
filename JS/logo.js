@@ -7,6 +7,7 @@ const logoPage=document.querySelector('.logoHome');
 
 let positionLogoPage= logoPage.getBoundingClientRect();
 let logoY=positionLogoPage.bottom;
+console.log=logoY;
 
 let positionScroll = 0;
 
@@ -14,7 +15,7 @@ let positionScroll = 0;
 
 
 function logoMvmnt(){
-    positionScroll=window.pageYOffset;
+    positionScroll=window.scrollY;
     if(logoY>positionScroll){
         logoHeader.style.display="none";
         titleHeader.style.display="none"
