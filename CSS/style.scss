@@ -1,5 +1,6 @@
 :root{
     --bkg-degrade:linear-gradient(180deg, #0A3D62 0%, #82CCDD 30.21%, #38ADA9 66.67%, #0A3D62 100%);
+    --typo-titre:"Raleway";
 }
 
 /* ---- FIN VARIABLES ---- */
@@ -36,29 +37,29 @@
             left: 0;
         }
         .parametres{
-            @include aligment(row,space-between ,baseline );
+            @include aligment(column,space-between ,center );
                 background-color: rgb(43, 255, 0);
                 position: fixed;
                 width: 5%;
-                height: 50vh;
+                height: 33vh;
                 z-index: 5;
                 top:0;
-                left:90%;
+                right:0;
             .gear img{
-                z-index: 5;
-                position: relative;
-                right: 50%;
                 height: 75px;
                 width: 75px;
             }
             .parametres--icones{
-                .para_theme,.para_lang,para_ressources{
-                   max-height: 33%;
-                }
                 @include aligment(column,space-evenly ,center );
-                height: 100%;
-                width: 15%;
+                //height: 100%;
+                .para_theme,.para_lang,.para_ressources{
+                  height: 95px;
+                }
+                
 
+            }
+            .hidden{
+                display: none;
             }
         }
         .parametres img{
@@ -79,7 +80,6 @@
             width: 100%;
             min-height: 100px;
             max-height: 150px;
-            border: #000 solid 1px;
             background: linear-gradient(180deg, #0A3D62 0%, rgba(10, 61, 98, 0.00) 100%);
             @include aligment(row,space-between ,center);
 
@@ -107,7 +107,7 @@
             }
             .header--navigation{
                 margin: auto;
-                margin-right:calc(50% /2);
+                margin-right:calc(100% /3);
                 width: 700px;
                 max-width: calc(100% /2);
                 #slider ul{
